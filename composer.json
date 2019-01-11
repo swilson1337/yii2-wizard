@@ -1,5 +1,5 @@
 {
-    "name": "beastbytes/yii2-wizard",
+    "name": "swilson1337/yii2-wizard",
     "description": "Yii2 extension to handle multi-form wizards",
     "keywords": ["yii2", "behavior", "form", "forms", "wizard"],
     "type": "yii2-extension",
