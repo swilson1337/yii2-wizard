@@ -311,6 +311,7 @@ class WizardBehavior extends Behavior
 
             if ($event->continue) {
                 $this->nextStep(); // redirects
+                return $event->data;
             }
 
             $this->resetWizard();
