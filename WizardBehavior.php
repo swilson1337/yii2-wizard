@@ -304,8 +304,9 @@ class WizardBehavior extends Behavior
             }
         } else {
             $event = new WizardEvent([
-                'sender' => $this,
-                'step'   => $step
+                'sender'    => $this,
+                'step'      => $step,
+                'continue'  => false,
             ]);
             $this->owner->trigger(self::EVENT_INVALID_STEP, $event);
 
@@ -315,6 +316,9 @@ class WizardBehavior extends Behavior
             }
 
             $this->resetWizard();
+            
+            $this->owner->redirect(['/'.$this->owner->route], self::HTTP_STATUS_CODE);
+            
             return $event->data;
         }
     }
